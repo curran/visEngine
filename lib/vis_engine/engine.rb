@@ -2,7 +2,7 @@ module VisEngine
   class Engine < ::Rails::Engine
     isolate_namespace VisEngine
 
-    # Initializer to combine this engines static assets with the static assets of the hosting site.
+    # Serve static assets in the 'public' directory through the engine.
     initializer 'static assets' do |app|
       app.middleware.insert_before(::ActionDispatch::Static, ::ActionDispatch::Static, "#{root}/public")
     end
