@@ -1,0 +1,3 @@
+[submodule "non-rails/chiasm"]
+	path = non-rails/chiasm
+	url = git@github.com:curran/chiasm.git
