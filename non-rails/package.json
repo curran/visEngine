@@ -1,0 +1,15 @@
+{
+  "name": "ChiasmBundler",
+  "version": "1.0.0",
+  "description": "This bundles Chiasm and dependencies for use in the Rails asset pipeline.",
+  "main": "myJavaScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "amd-optimize": "^0.4.3"
+  }
+}

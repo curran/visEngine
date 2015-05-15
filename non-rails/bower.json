@@ -1,0 +1,11 @@
+{
+  "name": "ChiasmBundler",
+  "dependencies": {
+    "model": "~0.2.1",
+    "lodash": "~3.8.0",
+    "d3": "~3.5.5",
+    "codemirror": "~5.2.0",
+    "inlet": "git@github.com:enjalot/Inlet.git",
+    "crossfilter": "~1.3.11"
+  }
+}

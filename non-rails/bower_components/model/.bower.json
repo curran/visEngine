@@ -1,0 +1,50 @@
+{
+  "name": "model",
+  "version": "0.2.1",
+  "homepage": "https://github.com/curran/model",
+  "authors": [
+    "Curran <curran.kelleher@gmail.com>",
+    "Mathias <mathias@rawu.dk>"
+  ],
+  "description": "A functional reactive model library.",
+  "main": "dist/model.js",
+  "license": "MIT",
+  "ignore": [
+    ".bowerrc",
+    ".git",
+    ".gitignore",
+    ".travis.yml",
+    "README.md",
+    "bower.json",
+    "countLines.sh",
+    "dataFlowGraphs",
+    "docs",
+    "examples",
+    "gulpfile.js",
+    "images",
+    "lib",
+    "node_modules",
+    "package.json",
+    "server.js",
+    "src",
+    "tests"
+  ],
+  "devDependencies": {
+    "d3": "~3.4.6",
+    "topojson": "~1.6.8",
+    "jasmine": "~2.0.0",
+    "requirejs": "~2.1.11",
+    "bootstrap": "~3.2.0"
+  },
+  "dependencies": {},
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "bd5aa11a1af836bb647413da1cd60ef51deddfa1"
+  },
+  "_source": "git://github.com/curran/model.git",
+  "_target": "~0.2.1",
+  "_originalSource": "model",
+  "_direct": true
+}
