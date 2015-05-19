@@ -95,7 +95,6 @@
         this.Model = Model;
     }
 }());
-
 ;
 (function () {
     var undefined;
@@ -4161,7 +4160,6 @@
         root._ = _;
     }
 }.call(this));
-
 define('chiasm', [
     'model',
     'lodash',
@@ -4425,7 +4423,6 @@ define('chiasm', [
     Chiasm.Action = Action;
     return Chiasm;
 });
-
 !function () {
     var d3 = { version: '3.5.5' };
     var d3_arraySlice = [].slice, d3_array = function (list) {
@@ -15853,7 +15850,6 @@ define('chiasm', [
         module.exports = d3;
     this.d3 = d3;
 }();
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis', [
     'model',
     'd3'
@@ -16118,7 +16114,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis', [
     reactivis.addPublicProperty = addPublicProperty;
     return reactivis;
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/barChart', [
     '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis',
     'd3',
@@ -16200,7 +16195,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/barChart', [
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/colorScale', ['model'], function (Model) {
     return function () {
         return Model({
@@ -16211,7 +16205,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/colorScale', 
         });
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout', ['lodash'], function (_) {
     return function computeLayout(layout, sizes, box) {
         var result = {}, isHorizontal, wiggleRoom, sizeSum = 0, x, y, visibleChildren;
@@ -16306,7 +16299,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout
         box.y = y;
     }
 });
-
 (function (mod) {
     if (typeof exports == 'object' && typeof module == 'object')
         module.exports = mod();
@@ -24971,7 +24963,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout
     CodeMirror.version = '5.2.0';
     return CodeMirror;
 }));
-
 (function (mod) {
     if (typeof exports == 'object' && typeof module == 'object')
         mod(require('../../lib/codemirror'));
@@ -25847,7 +25838,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout
         typescript: true
     });
 }));
-
 (function () {
     var HSLCircle, Picker, cssColorToRGB, fmod, hslToCSS, hslToRGB, hueToRGB, isValidCSSColor, map, normalizeColor, rgbToHSL, style, __slice = [].slice;
     hueToRGB = function (m1, m2, h) {
@@ -27045,7 +27035,6 @@ Inlet = function () {
 define('inlet', [], function () {
     return;
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/configEditor', [
     'd3',
     'model',
@@ -27092,7 +27081,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/configEditor'
         return model;
     };
 });
-
 (function (exports) {
     crossfilter.version = '1.3.11';
     function crossfilter_identity(d) {
@@ -28036,7 +28024,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/configEditor'
 define('crossfilter', [], function () {
     return;
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/crossfilter', [
     'model',
     'crossfilter'
@@ -28074,7 +28061,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/crossfilter',
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/csvLoader', [
     'd3',
     'model'
@@ -28112,7 +28098,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/csvLoader', [
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/dummyVis', [
     'd3',
     'model'
@@ -28189,7 +28174,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/dummyVis', [
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/layout', [
     '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout',
     'model',
@@ -28275,7 +28259,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/layout', [
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/lineChart', [
     '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis',
     'd3',
@@ -28353,7 +28336,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/lineChart', [
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/links', [
     'd3',
     'model'
@@ -28380,7 +28362,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/links', [
         return model;
     };
 });
-
 define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/scatterPlot', [
     'd3',
     'model',
@@ -28492,7 +28473,6 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/scatterPlot',
         return model;
     };
 });
-
 define('chiasmBundle', [
     'chiasm',
     '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/barChart',
@@ -28510,5 +28490,3 @@ define('chiasmBundle', [
 ], function (Chiasm) {
     return Chiasm;
 });
-
-//# sourceMappingURL=index.js.map

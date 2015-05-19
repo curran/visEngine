@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "file": "index.js",
+  "file": "chiasmBundle.js",
   "sources": [
     "bower_components/model/dist/model.js",
     "bower_components/lodash/lodash.js",

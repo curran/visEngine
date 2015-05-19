@@ -11,5 +11,8 @@
   "dependencies": {
     "gulp": "^3.8.11",
     "amd-optimize": "^0.4.3"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.5.2"
   }
 }
