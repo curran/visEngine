@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require ./almond.js
 //= require ./chiasmBundle.js

@@ -2,8 +2,8 @@ var gulp = require('gulp');
 var amdOptimize = require('amd-optimize');
 var concat = require('gulp-concat');
  
-var chiasmPath = __dirname + "/chiasm/src/";
-var bower = __dirname + "/bower_components/";
+var chiasmPath = "chiasm/src/";
+var bower = "bower_components/";
 
 var options = {
   paths: {

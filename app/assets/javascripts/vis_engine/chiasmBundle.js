@@ -15850,7 +15850,7 @@ define('chiasm', [
         module.exports = d3;
     this.d3 = d3;
 }();
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis', [
+define('chiasm/src/plugins/reactivis', [
     'model',
     'd3'
 ], function (Model, d3) {
@@ -16114,8 +16114,8 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis', [
     reactivis.addPublicProperty = addPublicProperty;
     return reactivis;
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/barChart', [
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis',
+define('chiasm/src/plugins/barChart', [
+    'chiasm/src/plugins/reactivis',
     'd3',
     'model',
     'lodash'
@@ -16195,7 +16195,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/barChart', [
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/colorScale', ['model'], function (Model) {
+define('chiasm/src/plugins/colorScale', ['model'], function (Model) {
     return function () {
         return Model({
             publicProperties: [
@@ -16205,7 +16205,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/colorScale', 
         });
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout', ['lodash'], function (_) {
+define('chiasm/src/plugins/computeLayout', ['lodash'], function (_) {
     return function computeLayout(layout, sizes, box) {
         var result = {}, isHorizontal, wiggleRoom, sizeSum = 0, x, y, visibleChildren;
         box.x = box.x || 0;
@@ -16303,7 +16303,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout
     if (typeof exports == 'object' && typeof module == 'object')
         module.exports = mod();
     else if (typeof define == 'function' && define.amd)
-        return define('/Users/curran/repos/visEngine/non-rails/bower_components/codemirror/lib/codemirror', [], mod);
+        return define('bower_components/codemirror/lib/codemirror', [], mod);
     else
         this.CodeMirror = mod();
 }(function () {
@@ -24967,7 +24967,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout
     if (typeof exports == 'object' && typeof module == 'object')
         mod(require('../../lib/codemirror'));
     else if (typeof define == 'function' && define.amd)
-        define('/Users/curran/repos/visEngine/non-rails/bower_components/codemirror/mode/javascript/javascript', ['/Users/curran/repos/visEngine/non-rails/bower_components/codemirror/lib/codemirror'], mod);
+        define('bower_components/codemirror/mode/javascript/javascript', ['bower_components/codemirror/lib/codemirror'], mod);
     else
         mod(CodeMirror);
 }(function (CodeMirror) {
@@ -27035,12 +27035,12 @@ Inlet = function () {
 define('inlet', [], function () {
     return;
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/configEditor', [
+define('chiasm/src/plugins/configEditor', [
     'd3',
     'model',
     'lodash',
-    '/Users/curran/repos/visEngine/non-rails/bower_components/codemirror/lib/codemirror',
-    '/Users/curran/repos/visEngine/non-rails/bower_components/codemirror/mode/javascript/javascript',
+    'bower_components/codemirror/lib/codemirror',
+    'bower_components/codemirror/mode/javascript/javascript',
     'inlet'
 ], function (d3, Model, _, CodeMirror) {
     return function ConfigEditor(chiasm) {
@@ -28024,7 +28024,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/configEditor'
 define('crossfilter', [], function () {
     return;
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/crossfilter', [
+define('chiasm/src/plugins/crossfilter', [
     'model',
     'crossfilter'
 ], function (Model) {
@@ -28061,7 +28061,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/crossfilter',
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/csvLoader', [
+define('chiasm/src/plugins/csvLoader', [
     'd3',
     'model'
 ], function (d3, Model) {
@@ -28098,7 +28098,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/csvLoader', [
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/dummyVis', [
+define('chiasm/src/plugins/dummyVis', [
     'd3',
     'model'
 ], function (d3, Model) {
@@ -28174,8 +28174,8 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/dummyVis', [
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/layout', [
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout',
+define('chiasm/src/plugins/layout', [
+    'chiasm/src/plugins/computeLayout',
     'model',
     'lodash'
 ], function (computeLayout, Model, _) {
@@ -28259,8 +28259,8 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/layout', [
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/lineChart', [
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis',
+define('chiasm/src/plugins/lineChart', [
+    'chiasm/src/plugins/reactivis',
     'd3',
     'model'
 ], function (reactivis, d3, Model) {
@@ -28336,7 +28336,7 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/lineChart', [
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/links', [
+define('chiasm/src/plugins/links', [
     'd3',
     'model'
 ], function (d3, Model) {
@@ -28362,10 +28362,10 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/links', [
         return model;
     };
 });
-define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/scatterPlot', [
+define('chiasm/src/plugins/scatterPlot', [
     'd3',
     'model',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis'
+    'chiasm/src/plugins/reactivis'
 ], function (d3, Model, reactivis) {
     var None = Model.None;
     var addPublicProperty = reactivis.addPublicProperty;
@@ -28475,18 +28475,18 @@ define('/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/scatterPlot',
 });
 define('chiasmBundle', [
     'chiasm',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/barChart',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/colorScale',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/computeLayout',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/configEditor',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/crossfilter',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/csvLoader',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/dummyVis',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/layout',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/lineChart',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/links',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/reactivis',
-    '/Users/curran/repos/visEngine/non-rails/chiasm/src/plugins/scatterPlot'
+    'chiasm/src/plugins/barChart',
+    'chiasm/src/plugins/colorScale',
+    'chiasm/src/plugins/computeLayout',
+    'chiasm/src/plugins/configEditor',
+    'chiasm/src/plugins/crossfilter',
+    'chiasm/src/plugins/csvLoader',
+    'chiasm/src/plugins/dummyVis',
+    'chiasm/src/plugins/layout',
+    'chiasm/src/plugins/lineChart',
+    'chiasm/src/plugins/links',
+    'chiasm/src/plugins/reactivis',
+    'chiasm/src/plugins/scatterPlot'
 ], function (Chiasm) {
     return Chiasm;
 });
