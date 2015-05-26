@@ -15865,7 +15865,7 @@ define('chiasm/src/plugins/reactivis', [
     }
     reactivis.svg = function (model) {
         model.when('container', function (container) {
-            model.svg = d3.select(container).append('svg').style('position', 'absolute');
+            model.svg = d3.select(container).append('svg').style('position', 'relative');
         });
         model.when([
             'svg',
@@ -16181,7 +16181,7 @@ define('chiasm/src/plugins/barChart', [
         ], function (barsG, data, x, y, xScale, height, color, xAccessor) {
             var bars = barsG.selectAll('rect').data(data, xAccessor);
             bars.enter().append('rect');
-            bars.transition().ease('linear').duration(200).attr('x', x).attr('y', y).attr('width', xScale.rangeBand()).attr('height', function (d) {
+            bars.attr('x', x).attr('y', y).attr('width', xScale.rangeBand()).attr('height', function (d) {
                 return height - y(d);
             }).attr('fill', color);
             bars.exit().remove();
