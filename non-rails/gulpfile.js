@@ -16,6 +16,12 @@ var options = {
     crossfilter: bower + "crossfilter/crossfilter",
     codemirror: bower + "codemirror",
     inlet: bower + "inlet/inlet"
+  },
+  wrapShim: true,
+  shim: {
+    "lodash" : {
+      exports : "_"
+    }
   }
 };
  

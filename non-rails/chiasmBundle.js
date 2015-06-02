@@ -12,6 +12,22 @@ define(["chiasm",
         "chiasm-plugins/lineChart",
         "chiasm-plugins/links",
         "chiasm-plugins/reactivis",
-        "chiasm-plugins/scatterPlot"], function (Chiasm) {
-  return Chiasm;
+        "chiasm-plugins/scatterPlot"], function (Chiasm, barChart, colorScale, computeLayout, configEditor, crossfilter, csvLoader, dummyVis, layout, lineChart, links, reactivis, scatterPlot){
+  return function (){
+    var chiasm = Chiasm();
+
+    chiasm.plugins.barChart = barChart;
+    chiasm.plugins.colorScale = colorScale;
+    chiasm.plugins.computeLayout = computeLayout;
+    chiasm.plugins.configEditor = configEditor;
+    chiasm.plugins.crossfilter = crossfilter;
+    chiasm.plugins.csvLoader = csvLoader;
+    chiasm.plugins.dummyVis = dummyVis;
+    chiasm.plugins.layout = layout;
+    chiasm.plugins.lineChart = lineChart;
+    chiasm.plugins.links = links;
+    chiasm.plugins.scatterPlot = scatterPlot;
+
+    return chiasm;
+  }
 });
