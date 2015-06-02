@@ -28494,8 +28494,8 @@ define('chiasmBundle', [
     'chiasm/src/plugins/reactivis',
     'chiasm/src/plugins/scatterPlot'
 ], function (Chiasm, barChart, colorScale, computeLayout, configEditor, crossfilter, csvLoader, dummyVis, layout, lineChart, links, reactivis, scatterPlot) {
-    return function () {
-        var chiasm = Chiasm();
+    return function (container) {
+        var chiasm = Chiasm(container);
         chiasm.plugins.barChart = barChart;
         chiasm.plugins.colorScale = colorScale;
         chiasm.plugins.computeLayout = computeLayout;
