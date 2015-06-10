@@ -1,9 +1,35 @@
 module VisEngine
   class ApplicationController < ActionController::Base
 
-    def reduce_data
+    def get_random_sample
 
-      render text: "Hello"
+      dataset_id = params[:dataset_id]
+      num_samples = params[:num_samples]
+
+      # TODO query an Alpine REST API that fetches the random sample
+
+      # Possibly use https://github.com/jnunemaker/httparty
+      class AlpineRESTClient
+        include HTTParty
+        base_uri 'http://localhost:6546/getData'
+      end
+
+      options = {
+          body: {
+              pear: { # your resource
+                      foo: '123', # your columns/data
+                      bar: 'second',
+                      baz: 'last thing'
+              }
+          }
+      }
+
+      pp Partay.post('/pears.xml', options)
+
+      # Render the resulting table as JSON
+      render text: '[{"x":2},{"x":3},{"x":4}]'
+
+
 
 #      options = params[:options] 
 #
@@ -26,7 +52,7 @@ module VisEngine
 #      res = Net::HTTP.start(uri.host, uri.port) {|http| http.request(req) }
 #
 #      # Pass through the results to the client.
-#      render body: res.body #, content_type: "text/html"
+#      render body: res.body #, content_type: "application/json"
     end
   end
 end
