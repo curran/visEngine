@@ -7,30 +7,15 @@ module VisEngine
       num_samples = params[:num_samples]
 
       # TODO query an Alpine REST API that fetches the random sample
-
+      # passing in dataset_id and num_samples
       # Possibly use https://github.com/jnunemaker/httparty
-      class AlpineRESTClient
-        include HTTParty
-        base_uri 'http://localhost:6546/getData'
-      end
+      resultFromAlpine = '[{"x":2},{"x":3},{"x":4}]'
 
-      options = {
-          body: {
-              pear: { # your resource
-                      foo: '123', # your columns/data
-                      bar: 'second',
-                      baz: 'last thing'
-              }
-          }
-      }
+      # Render the resulting table as JSON,
+      # passing the result from the Alpine REST API as-is
+      render json: resultFromAlpine
 
-      pp Partay.post('/pears.xml', options)
-
-      # Render the resulting table as JSON
-      render text: '[{"x":2},{"x":3},{"x":4}]'
-
-
-
+#      This is old experimental code that invokes Spark Jobserver.
 #      options = params[:options] 
 #
 #      # This connects to a local Spark-Jobserver to run the
