@@ -1,5 +1,5 @@
 # visEngine
-A server side component for interactive data reduction queries.  
+A server side component for interactive data reduction queries. Work in progress - it doesn't actually work yet, but this repo contains design ideas and partial implementations.
 
 This project is essentially a server for [Chiasm](https://github.com/curran/chiasm) that is designed such that it can integrated with [Chorus](https://github.com/Chorus/chorus), a collaboration platform for Big Data.
 
