@@ -1,18 +1,30 @@
 module VisEngine
   class ApplicationController < ActionController::Base
 
-    def get_random_sample
+    def reduce_data
 
+      puts "here in get_random_sample"
+
+      # For now we just want a random sample
+      method = "randomSample"
+
+      # This is the ID of the data set metadata stored in the Chorus database.
       dataset_id = params[:dataset_id]
+
+      # This is the number of rows to fetch in the random sample returned.
+      # There should only be one table returned (a single sample set).
       num_samples = params[:num_samples]
 
       # TODO query an Alpine REST API that fetches the random sample
-      # passing in dataset_id and num_samples
-      # Possibly use https://github.com/jnunemaker/httparty
+      # passing in method, dataset_id, and num_samples
+      # The implementation should assume defaults for random sampling parameters,
+      # e.g. use uniform distribution, use replacement, etc.
+
+      # Possibly use https://github.com/jnunemaker/httparty to make the REST request.
       resultFromAlpine = '[{"x":2},{"x":3},{"x":4}]'
 
       # Render the resulting table as JSON,
-      # passing the result from the Alpine REST API as-is
+      # passing the resulting JSON string from the Alpine REST API as-is
       render json: resultFromAlpine
 
 #      This is old experimental code that invokes Spark Jobserver.
