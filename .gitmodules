@@ -1,3 +1,6 @@
 [submodule "non-rails/chiasm"]
 	path = non-rails/chiasm
 	url = git@github.com:curran/chiasm.git
+[submodule "app/assets/javascripts/vis_engine/chiasm"]
+	path = app/assets/javascripts/vis_engine/chiasm
+	url = git@github.com:curran/chiasm.git
