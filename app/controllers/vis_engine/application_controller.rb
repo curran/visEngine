@@ -3,11 +3,6 @@ module VisEngine
 
     def reduce_data
 
-      puts "here in get_random_sample"
-
-      # For now we just want a random sample
-      method = "randomSample"
-
       # This is the ID of the data set metadata stored in the Chorus database.
       dataset_id = params[:dataset_id]
 
@@ -15,13 +10,39 @@ module VisEngine
       # There should only be one table returned (a single sample set).
       num_samples = params[:num_samples]
 
+      # TODO extract connection details from the Chorus metadata database.
+
       # TODO query an Alpine REST API that fetches the random sample
       # passing in method, dataset_id, and num_samples
       # The implementation should assume defaults for random sampling parameters,
       # e.g. use uniform distribution, use replacement, etc.
 
       # Possibly use https://github.com/jnunemaker/httparty to make the REST request.
-      resultFromAlpine = '[{"x":2},{"x":3},{"x":4}]'
+
+      # This string is temporarily hard-coded, in anticipation of the 
+      # REST API for random sampling.
+      # This will be parsed by https://github.com/curran/dsv-dataset
+      resultFromAlpine = <<-FOO
+{
+  "dsvString":"sepal_length,sepal_width,petal_length,petal_width,class
+5.1,3.5,1.4,0.2,setosa
+6.2,2.9,4.3,1.3,versicolor
+6.3,3.3,6.0,2.5,virginica",
+  "metadata":{
+    "delimiter": ",",
+    "columns": [
+      { "name": "sepal_length", "type": "number" },
+      { "name": "sepal_width",  "type": "number" },
+      { "name": "petal_length", "type": "number" },
+      { "name": "petal_width",  "type": "number" },
+      { "name": "class",        "type": "string" }
+    ]
+  }
+}
+FOO
+
+#// This metadata object specifies the delimiter and column types.
+#// This could be loaded from a .json file.
 
       # Render the resulting table as JSON,
       # passing the resulting JSON string from the Alpine REST API as-is
