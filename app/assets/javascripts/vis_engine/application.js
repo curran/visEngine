@@ -11,3 +11,4 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require ./chiasm/chiasm-bundle.js
+//= require ./model.js
