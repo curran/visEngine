@@ -1,0 +1,11 @@
+{
+  "name": "vis_engine",
+  "scripts": {
+    "bundle": "browserify -s VisEngine visEngine.js -o visEngineBundle.js"
+  },
+  "dependencies": {
+    "chiasm": "file:chiasm",
+    "dsv-dataset": "^0.1.1",
+    "model-js": "^0.2.4"
+  }
+}
