@@ -12,7 +12,7 @@ module.exports = function (){
     if(dataset_id !== Model.None){
 
       // TODO include dataset id in the API call
-      console.log(dataset_id);
+      //console.log(dataset_id);
 
       $.get("/vis_engine/reduce_data", function (response){
         var dataset = dsvDataset.parse(response);

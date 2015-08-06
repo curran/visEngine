@@ -28408,7 +28408,6 @@ var chiasm;
 module.exports = {
   chiasmInit: function (container){
     if (!chiasm) {
-      console.log(container);
       chiasm = Chiasm(container);
 
       // Expose the plugin to configurations on this Chiasm instance.
@@ -28433,7 +28432,7 @@ module.exports = function (){
     if(dataset_id !== Model.None){
 
       // TODO include dataset id in the API call
-      console.log(dataset_id);
+      //console.log(dataset_id);
 
       $.get("/vis_engine/reduce_data", function (response){
         var dataset = dsvDataset.parse(response);

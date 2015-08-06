@@ -14,7 +14,6 @@ var chiasm;
 module.exports = {
   chiasmInit: function (container){
     if (!chiasm) {
-      console.log(container);
       chiasm = Chiasm(container);
 
       // Expose the plugin to configurations on this Chiasm instance.
