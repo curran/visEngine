@@ -7,15 +7,15 @@ require "vis_engine/version"
 Gem::Specification.new do |s|
   s.name        = "vis_engine"
   s.version     = VisEngine::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of VisEngine."
-  s.description = "TODO: Description of VisEngine."
+  s.authors     = ["Curran Kelleher"]
+  s.email       = ["curran@alpinenow.com"]
+  s.homepage    = ""
+  s.summary     = "Summary of VisEngine."
+  s.description = "Description of VisEngine."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.18"
+  s.add_dependency "rails", "4.1.10"
   # s.add_dependency "jquery-rails"
 end

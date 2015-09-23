@@ -28437,6 +28437,8 @@ module.exports = function (){
       $.get("/vis_engine/reduce_data", function (response){
         var dataset = dsvDataset.parse(response);
         model.data = dataset.data;
+        console.log("Fdsafdsafdsa");
+        console.log(dataset.data);
       });
     }
   });
